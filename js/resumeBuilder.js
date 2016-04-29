@@ -98,3 +98,24 @@ if(bio.skills.length > 0) {
 		$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
 	}
 }
+
+	if(work.jobs.length > 0) {
+
+		$("#workExperience").append(HTMLworkStart);
+
+		for(job in work.jobs) {
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+			var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			var formattedDatesWorked = HTMLworkDates.replace("%data%", work.jobs[job].datesWorked);
+			var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+			var formattedEmployerWorkTitle = formattedEmployer + formattedWorkTitle;
+
+			$(".work-entry:last").append(formattedEmployerWorkTitle);
+			$(".work-entry:last").append(formattedWorkLocation);
+			$(".work-entry:last").append(formattedDatesWorked);
+			$(".work-entry:last").append(formattedWorkDescription);
+		}
+
+	}
