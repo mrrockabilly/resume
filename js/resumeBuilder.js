@@ -17,14 +17,14 @@ var work = {
 			"employer": "KPMG",
 			"title": "Socail Media Analyst and Quality Control Supervisor",
 			"location": "Orange County, CA",
-			"datesWorked": "March 2015 - December 2015",
+			"datesWorked": "August 2013-November 2015",
 			"description": "Place Holder"
 		},
 		{
 			"employer": "ProUnlimited",
 			"title": "QC Testor",
-			"location": "EOrange County, CA",
-			"datesWorked": "September 2008 - March 2015",
+			"location": "Orange County, CA",
+			"datesWorked": "Sept 2012- August 2013",
 			"description": "Place Holder"
 		}
 	]
@@ -33,8 +33,8 @@ var work = {
 var education = {
 	"schools": [
 		{ "name": "University of California, Santa Cruz",
-			"datesAttended": "1996 - 2001",
-			"location": "Windsor, Ontario, Canada",
+			"datesAttended": "2009 - 2012",
+			"location": "Santa Cruz, California",
 			"degree": "B.A.",
 			"major": "Math",
 			"url": "www.ucsc.edu"
@@ -42,29 +42,14 @@ var education = {
 	],
 	"onlineCourses": [
 		{ "school": "Udacity",
-			"title": "Object-Oriented Javascript",
-			"completed": "November 2014",
-			"url": "https://www.udacity.com/course/ud015"
-		},
-		{ "school": "Udacity",
-			"title": "HTML5 Canvas",
-			"completed": "November 2014",
-			"url": "https://www.udacity.com/course/ud292"
-		},
-		{ "school": "Udacity",
-			"title": "Javascript Basics",
-			"completed": "October 2014",
-			"url": "https://www.udacity.com/course/ud804"
-		},
-		{ "school": "Udacity",
-			"title": "Intro to HTML and CSS",
-			"completed": "October 2014",
+			"title": "HTML & CSS",
+			"completed": "April 2016",
 			"url": "https://www.udacity.com/course/ud304"
 		},
 		{ "school": "Udacity",
-			"title": "Web Development",
-			"completed": "August 2014",
-			"url": "https://www.udacity.com/course/cs253"
+			"title": "Javascript Basics",
+			"completed": "May 2016",
+			"url": "https://www.udacity.com/course/ud804"
 		}
 	]
 };
@@ -73,7 +58,7 @@ var projects = {
 	"projects": [
 		{
 			"title": "Online Portfolio",
-			"datesWorked": "October 2014",
+			"datesWorked": "April 2016",
 			"description": "Created an online portfolio of work as part of Udacity's Front-End Web Developer " +
 			"Nanodegree.",
 			"images": ["images/guitar.png"],
@@ -81,7 +66,7 @@ var projects = {
 		},
 		{
 			"title": "Mr. Rockabilly",
-			"datesWorked": "June 2014 - August 2014",
+			"datesWorked": "April 2016",
 			"description": "Created an online portfolio using a Ruby on Rails framework. It runs on an Amazon EC2 instance.",
 			"images": ["images/books.png"],
 			"url": "http://mrrockabilly.com"
