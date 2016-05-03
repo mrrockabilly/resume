@@ -99,6 +99,9 @@ if(bio.skills.length > 0) {
 	}
 }
 
+
+function displayWork()
+{
 	if(work.jobs.length > 0) {
 
 		$("#workExperience").append(HTMLworkStart);
@@ -119,3 +122,15 @@ if(bio.skills.length > 0) {
 		}
 
 	}
+}
+
+// Logs clicks to console.
+$(document).click(function(loc)
+{
+	var x = loc.pageX;
+	var y = loc.pageY;
+
+	logClicks(x,y);
+});
+
+displayWork();
