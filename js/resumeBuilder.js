@@ -90,13 +90,11 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
+$("#header").append(HTMLskillsStart);
 
-if(bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-
-	for(i in bio.skills) {
-		$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
-	}
+for(i in bio.skills)
+{
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
 }
 
 
@@ -159,7 +157,29 @@ function inName(name)
 	return name[0] + " " + name[1];
 }
 
+projects.display = function()
+{
+		for(i in projects.projects)
+		{
+			$("#projects").append(HTMLprojectStart);
+
+			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title).replace("#", projects.projects[i].url);
+			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].datesWorked);
+			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+
+			$(".project-entry:last").append(formattedProjectTitle);
+			$(".project-entry:last").append(formattedProjectDates);
+			$(".project-entry:last").append(formattedProjectDescription);
+
+			for(img in projects.projects[i].images) {
+				var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[img]);
+				$(".project-entry:last").append(formattedProjectImage);
+			}
+		}
+}
 
 
 
+console.log(inName(bio.name));
 displayWork();
+projects.display();
