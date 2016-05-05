@@ -91,6 +91,7 @@ $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 $("#header").append(HTMLskillsStart);
+$("#mapDiv").append(googleMap);
 
 for(i in bio.skills)
 {
