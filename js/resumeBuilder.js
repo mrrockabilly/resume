@@ -180,6 +180,7 @@ projects.display = function()
 }
 
 education.display = function() {
+	if(education.schools.length > 0 || education.onlineCourses.length > 0) {
 		for(i in education.schools) {
 			$("#education").append(HTMLschoolStart);
 
@@ -211,12 +212,14 @@ education.display = function() {
 				$(".education-entry:last").append(formattedOnlineURL);
 			}
 		}
+
+	}
 }
 
+education.display();
 
 
 
 console.log(inName(bio.name));
 displayWork();
 projects.display();
-education.display();
