@@ -18,14 +18,14 @@ var work = {
 			"title": "Socail Media Analyst and Quality Control Supervisor",
 			"location": "Orange County, CA",
 			"datesWorked": "August 2013-November 2015",
-			"description": "Place Holder"
+			"description": "Prepared Power Point presentations for executive level management on social media data. <br /> Wrote training manuals and FAQ documents for various in-house developed tools, these documents were used internally by management as well as by clients.<br /> Served as a liaison between clients and a software development team to improve the end user experience for the customer. <br />Supervised the social media quality control team, which included local and overseas contractors."
 		},
 		{
 			"employer": "ProUnlimited",
 			"title": "QC Testor",
 			"location": "Orange County, CA",
 			"datesWorked": "Sept 2012- August 2013",
-			"description": "Place Holder"
+			"description": "Worked closely with software developers and data scientists, provided a feedback loop to improve methods for data gathering. <br /> Reviewed and assured relevancy of gathered social media data. <br /> Analyzed Twitter and other social media trends Assisted management with data presentations to the customer, addressing customer expectations and concerns."
 		}
 	]
 };
