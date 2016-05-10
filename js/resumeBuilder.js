@@ -36,7 +36,8 @@ var education = {
 			"datesAttended": "2009 - 2012",
 			"location": "Santa Cruz, California",
 			"degree": "B.A.",
-			"major": "Math",
+			"major": "Mathematics",
+			"minor": "Computational Math",
 			"url": "www.ucsc.edu"
 		}
 	],
@@ -62,7 +63,7 @@ var projects = {
 			"description": "Created an online portfolio of work as part of Udacity's Front-End Web Developer " +
 			"Nanodegree.",
 			"images": ["images/guitar.png"],
-			"url": "http://www.github.com/mrrockabilly"
+			"url": "https://github.com/mrrockabilly/portfolio_hw"
 		},
 		{
 			"title": "Mr. Rockabilly",
