@@ -7,8 +7,8 @@ var bio = {
 		"location": "Koreatown, Los Angeles"
 	},
 	"picture": "images/me.png",
-	"welcomeMessage": "I'm an experienced social media analyst and web developer.  Thanks for checking out my resume!",
-	"skills": ["C++", "HTML", "CSS", "Ruby", "Quality Control", "SDLC"]
+	"welcomeMessage": "I'm a social media analyst and web developer.  Thanks for checking out my resume!",
+	"skills": ["Social Media Analytics", "Web Development", "Quality Control", "SDLC"]
 };
 
 var work = {
