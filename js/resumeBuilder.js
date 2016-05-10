@@ -93,11 +93,18 @@ $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 $("#header").append(HTMLskillsStart);
 
-for(var i in bio.skills)
-{
-	$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+
+if(bio.skills.length > 0) {
+	for(var i in bio.skills)
+	{
+		$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+	}
 }
 
+for(i in formattedContactInfo) {
+	$("#topContacts").append(formattedContactInfo[i]);
+	$("#footerContacts").append(formattedContactInfo[i]);
+}
 
 function displayWork()
 {
@@ -151,6 +158,7 @@ function inName(name)
 
 projects.display = function()
 {
+	if(projects.projects.length > 0) {
 		for(var i in projects.projects)
 		{
 			$("#projects").append(HTMLprojectStart);
@@ -168,6 +176,7 @@ projects.display = function()
 				$(".project-entry:last").append(formattedProjectImage);
 			}
 		}
+	}
 };
 
 education.display = function() {
