@@ -41,15 +41,15 @@ var education = {
 		}
 	],
 	"onlineCourses": [
-		{ "school": "Udacity",
-			"title": "HTML & CSS",
-			"completed": "April 2016",
-			"url": "https://www.udacity.com/course/ud304"
+		{ "school": "Codecademy",
+			"title": "Learn the Command Line",
+			"completed": "October 2015",
+			"url": "https://www.codecademy.com/learn/learn-the-command-line"
 		},
-		{ "school": "Udacity",
-			"title": "Javascript Basics",
-			"completed": "May 2016",
-			"url": "https://www.udacity.com/course/ud804"
+		{ "school": "Codecademy",
+			"title": "SQL",
+			"completed": "November 2015",
+			"url": "https://www.codecademy.com/learn/learn-sql"
 		}
 	]
 };
