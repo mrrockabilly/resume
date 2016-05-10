@@ -138,15 +138,6 @@ function locationizer(work_obj)
 
 }
 
-// This function logs clicks to console.
-$(document).click(function(loc)
-{
-	var x = loc.pageX;
-	var y = loc.pageY;
-
-	logClicks(x,y);
-});
-
 // This function converts names to an international statndard.
 function inName(name)
 {
