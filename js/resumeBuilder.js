@@ -93,7 +93,7 @@ $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 $("#header").append(HTMLskillsStart);
 
-for(i in bio.skills)
+for(var i in bio.skills)
 {
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
 }
@@ -105,7 +105,7 @@ function displayWork()
 
 		$("#workExperience").append(HTMLworkStart);
 
-		for(job in work.jobs) {
+		for(var job in work.jobs) {
 			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 			var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 			var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
@@ -151,7 +151,7 @@ function inName(name)
 
 projects.display = function()
 {
-		for(i in projects.projects)
+		for(var i in projects.projects)
 		{
 			$("#projects").append(HTMLprojectStart);
 
@@ -163,16 +163,16 @@ projects.display = function()
 			$(".project-entry:last").append(formattedProjectDates);
 			$(".project-entry:last").append(formattedProjectDescription);
 
-			for(img in projects.projects[i].images) {
+			for(var img in projects.projects[i].images) {
 				var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[img]);
 				$(".project-entry:last").append(formattedProjectImage);
 			}
 		}
-}
+};
 
 education.display = function() {
 	if(education.schools.length > 0 || education.onlineCourses.length > 0) {
-		for(i in education.schools) {
+		for(var i in education.schools) {
 			$("#education").append(HTMLschoolStart);
 
 			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
@@ -191,12 +191,12 @@ education.display = function() {
 
 		if(education.onlineCourses.length > 0) {
 			$("#education").append(HTMLonlineClasses);
-			for(i in education.onlineCourses) {
+			for(var j in education.onlineCourses) {
 				$("#education").append(HTMLschoolStart);
-				var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
-				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
-				var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].completed);
-				var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url).replace("#", education.onlineCourses[i].url);
+				var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[j].title).replace("#", education.onlineCourses[j].url);
+				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[j].school);
+				var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[j].completed);
+				var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[j].url).replace("#", education.onlineCourses[j].url);
 
 				$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
 				$(".education-entry:last").append(formattedOnlineDates);
@@ -205,7 +205,7 @@ education.display = function() {
 		}
 
 	}
-}
+};
 
 education.display();
 
