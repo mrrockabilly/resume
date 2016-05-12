@@ -69,35 +69,35 @@ var projects = {
     }]
 };
 
+bio.display = function() {
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-
-var formattedContactInfo = [];
-formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
-formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
-
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
-$("#header").append(HTMLskillsStart);
+  var formattedContactInfo = [];
+  formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
+  formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
+  formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
-if (bio.skills.length > 0) {
-    for (var i in bio.skills) {
-        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
-    }
-}
+  $("#header").prepend(formattedRole);
+  $("#header").prepend(formattedName);
+  $("#header").append(formattedBioPic);
+  $("#header").append(formattedWelcomeMsg);
+  $("#header").append(HTMLskillsStart);
 
-for (var k in formattedContactInfo) {
-    $("#topContacts").append(formattedContactInfo[k]);
-    $("#footerContacts").append(formattedContactInfo[k]);
-}
+  if (bio.skills.length > 0) {
+      for (var i in bio.skills) {
+          $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+      }
+  }
+
+  for (var k in formattedContactInfo) {
+      $("#topContacts").append(formattedContactInfo[k]);
+      $("#footerContacts").append(formattedContactInfo[k]);
+  }
+};
 
 function displayWork() {
     if (work.jobs.length > 0) {
@@ -203,10 +203,8 @@ education.display = function() {
     }
 };
 
+bio.display();
 education.display();
-
-
-
 console.log(inName(bio.name));
 displayWork();
 projects.display();
