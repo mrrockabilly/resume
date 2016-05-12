@@ -99,7 +99,7 @@ bio.display = function() {
   }
 };
 
-function displayWork() {
+work.display = function() {
     if (work.jobs.length > 0) {
 
         $("#workExperience").append(HTMLworkStart);
@@ -120,10 +120,10 @@ function displayWork() {
         }
 
     }
-}
+};
 
 // This function returns all the locations in my work history.
-
+/*
 function locationizer(work_obj) {
     var locationsArray = [];
 
@@ -135,6 +135,7 @@ function locationizer(work_obj) {
 
 }
 
+
 // This function converts names to an international statndard.
 function inName(name) {
     name = name.trim().split(" ");
@@ -144,6 +145,8 @@ function inName(name) {
         name[0].slice(1).toLowerCase();
     return name[0] + " " + name[1];
 }
+*/
+
 
 projects.display = function() {
     if (projects.projects.length > 0) {
@@ -205,7 +208,6 @@ education.display = function() {
 
 bio.display();
 education.display();
-console.log(inName(bio.name));
-displayWork();
+work.display();
 projects.display();
 $("#mapDiv").append(googleMap);
