@@ -32,10 +32,10 @@ var work = {
 var education = {
     "schools": [{
         "name": "University of California, Santa Cruz",
-        "datesAttended": "2009 - 2012",
+        "date": "2009 - 2012",
         "location": "Santa Cruz, California",
         "degree": "B.A.",
-        "major": "Mathematics",
+        "major": ["Mathematics"],
         "minor": "Computational Math",
         "url": "www.ucsc.edu"
     }],
@@ -176,7 +176,7 @@ education.display = function() {
 
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-            var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].datesAttended);
+            var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].date);
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
             var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
             var formattedSchoolMinor = HTMLschoolMinor.replace("%data%", education.schools[i].minor);
