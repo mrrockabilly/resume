@@ -5,9 +5,10 @@ var bio = {
     "contacts": {
         "email": "jason.ray.rubalcaba@gmail.com",
         "github": "mrrockabilly",
-        "location": "Koreatown, Los Angeles"
+        "location": "Koreatown, Los Angeles",
+        "mobile": "310-650-8107"
     },
-    "picture": "images/me.png",
+    "biopic": "images/me.png",
     "welcomeMessage": "I'm a social media analyst and web developer.  Thanks for checking out my resume!",
     "skills": ["Social Media Analytics", "Web Development", "Quality Control", "SDLC"]
 };
@@ -17,13 +18,13 @@ var work = {
         "employer": "KPMG",
         "title": "Socail Media Analyst and Quality Control Supervisor",
         "location": "Orange County, CA",
-        "datesWorked": "August 2013-November 2015",
+        "dates": "August 2013-November 2015",
         "description": "Prepared Power Point presentations for executive level management on social media data. <br /> Wrote training manuals and FAQ documents for various in-house developed tools, these documents were used internally by management as well as by clients.<br /> Served as a liaison between clients and a software development team to improve the end user experience for the customer. <br />Supervised the social media quality control team, which included local and overseas contractors."
     }, {
         "employer": "ProUnlimited",
         "title": "QC Testor",
         "location": "Orange County, CA",
-        "datesWorked": "Sept 2012- August 2013",
+        "dates": "Sept 2012- August 2013",
         "description": "Worked closely with software developers and data scientists, provided a feedback loop to improve methods for data gathering. <br /> Reviewed and assured relevancy of gathered social media data. <br /> Analyzed Twitter and other social media trends Assisted management with data presentations to the customer, addressing customer expectations and concerns."
     }]
 };
@@ -54,14 +55,14 @@ var education = {
 var projects = {
     "projects": [{
         "title": "Online Portfolio",
-        "datesWorked": "April 2016",
+        "dates": "April 2016",
         "description": "Created an online portfolio of work as part of Udacity's Front-End Web Developer " +
             "Nanodegree.",
         "images": ["images/guitar.png"],
         "url": "https://github.com/mrrockabilly/portfolio_hw"
     }, {
         "title": "Mr. Rockabilly",
-        "datesWorked": "April 2016",
+        "dates": "April 2016",
         "description": "Created an online portfolio using a Ruby on Rails framework. It runs on an Amazon EC2 instance.",
         "images": ["images/books.png"],
         "url": "http://mrrockabilly.com"
@@ -71,7 +72,7 @@ var projects = {
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 
 var formattedContactInfo = [];
@@ -107,7 +108,7 @@ function displayWork() {
             var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
             var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
             var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-            var formattedDatesWorked = HTMLworkDates.replace("%data%", work.jobs[job].datesWorked);
+            var formattedDatesWorked = HTMLworkDates.replace("%data%", work.jobs[job].dates);
             var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
             var formattedEmployerWorkTitle = formattedEmployer + formattedWorkTitle;
@@ -150,7 +151,7 @@ projects.display = function() {
             $("#projects").append(HTMLprojectStart);
 
             var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title).replace("#", projects.projects[i].url);
-            var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].datesWorked);
+            var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 
             $(".project-entry:last").append(formattedProjectTitle);
